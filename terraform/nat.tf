@@ -9,5 +9,10 @@ source_subnetwork_ip_ranges_to_nat = "LIST_OF_SUBNETWORKS"
     name                    = "mangment"
     source_ip_ranges_to_nat = ["10.0.1.0/24"]
   }
+   subnetwork {
+    name                    = "restricted"
+    source_ip_ranges_to_nat = ["10.0.0.0/24"]
+  }
+
 
 }

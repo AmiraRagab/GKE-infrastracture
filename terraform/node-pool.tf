@@ -12,9 +12,9 @@ resource "google_project_iam_binding" "admin-account-iam" {
 }
 resource "google_container_node_pool" "general" {
   name       = "general"
-  cluster    = google_container_cluster.gke.name
+  cluster    = google_container_cluster.gke-cluster.name
   node_count = 1
-  location       = google_container_cluster.gke.location
+  location       = google_container_cluster.gke-cluster.location
 
   management {
     auto_repair  = true
@@ -53,7 +53,7 @@ resource "google_container_node_pool" "general" {
 
 resource "google_container_node_pool" "spot" {
   name    = "spot"
-  cluster = google_container_cluster.gke.id
+  cluster = google_container_cluster.gke-cluster.id
 
   management {
     auto_repair  = true

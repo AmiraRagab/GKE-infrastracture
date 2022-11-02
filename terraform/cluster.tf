@@ -1,4 +1,4 @@
-resource "google_container_cluster" "gke" {
+resource "google_container_cluster" "gke-cluster" {
   name                     = "gke"
   location                 = "us-central1"
   remove_default_node_pool = true
