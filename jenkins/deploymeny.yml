@@ -16,5 +16,10 @@ spec:
   containers:
     - name: contianer-jenkins
       image: docker.io/amirayousef/jenkins-amira
+      securityContext:
+      allowPrivilegeEscalation: true 
+      privileged: true
+      readOnlyRootFilesystem: false
+      runAsUser: 0
       ports:
         - contianerPort: 8080 
